@@ -36,10 +36,16 @@
 	import { fetchAndMergeChunks } from '~/utils/fetchChunks';
 	import WeightPopovers from '~/components/WeightPopovers.svelte';
 	import { fade } from 'svelte/transition';
-	import { AutoTokenizer } from '@xenova/transformers';
+	import { AutoTokenizer, env } from '@xenova/transformers';
 	import { ex0, ex1, ex2, ex3, ex4 } from '~/constants/examples';
 	import BlockTransition from '~/components/BlockTransition.svelte';
 	import QKV from '~/components/QKV.svelte';
+
+	// Configure transformers to use HuggingFace CDN
+	env.allowRemoteModels = true;
+	env.allowLocalModels = false;
+	env.remoteHost = 'https://huggingface.co/';
+	env.remotePathTemplate = '{model}/resolve/{revision}/{file}';
 
 	let active = false;
 
@@ -48,13 +54,21 @@
 		let unsubscribe: (() => void) | undefined;
 		
 		const init = async () => {
-			const gpt2Tokenizer = await AutoTokenizer.from_pretrained('Xenova/gpt2');
-			active = true;
+			try {
+				console.log('Loading tokenizer...');
+				const gpt2Tokenizer = await AutoTokenizer.from_pretrained('Xenova/gpt2');
+				console.log('Tokenizer loaded successfully');
+				active = true;
 
-			unsubscribe = subscribeInputs(gpt2Tokenizer);
+				unsubscribe = subscribeInputs(gpt2Tokenizer);
 
-			if (!$isMobile) {
-				await fetchModel();
+				if (!$isMobile) {
+					await fetchModel();
+				}
+			} catch (error) {
+				console.error('Failed to load tokenizer:', error);
+				// Try fallback approach or show error message
+				active = true; // Still activate the app, we can handle tokenization errors later
 			}
 		};
 		

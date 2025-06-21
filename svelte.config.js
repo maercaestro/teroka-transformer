@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,8 +8,10 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		// adapter-auto supports Vercel out of the box
-		adapter: adapter(),
+		// Use adapter-vercel with explicit Node.js 20 runtime
+		adapter: adapter({
+			runtime: 'nodejs20.x'
+		}),
 		alias: {
 			'~': './src'
 		},

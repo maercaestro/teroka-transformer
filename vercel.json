@@ -1,10 +1,5 @@
 {
   "framework": "sveltekit",
-  "functions": {
-    "app/server.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",

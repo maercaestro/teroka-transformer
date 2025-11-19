@@ -18,50 +18,19 @@
 		</div>
 	</div>
 	<div class="icons flex items-center gap-3">
-		<!-- arxiv -->
-		<a href="https://arxiv.org/abs/2408.04619" target="_blank" data-click="pdf-btn">
-			<svg
-				class="h-6 w-6 text-gray-800 dark:text-white"
-				aria-hidden="true"
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				fill="currentColor"
-				viewBox="0 0 24 24"
-			>
-				<path
-					fill-rule="evenodd"
-					d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2 2h12a2 2 0 0 0 2-2 2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2V4a2 2 0 0 0-2-2h-7Zm-6 9a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-1h.5a2.5 2.5 0 0 0 0-5H5Zm1.5 3H6v-1h.5a.5.5 0 0 1 0 1Zm4.5-3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h1.376A2.626 2.626 0 0 0 15 15.375v-1.75A2.626 2.626 0 0 0 12.375 11H11Zm1 5v-3h.375a.626.626 0 0 1 .625.626v1.748a.625.625 0 0 1-.626.626H12Zm5-5a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-1h1a1 1 0 1 0 0-2h-1v-1h1a1 1 0 1 0 0-2h-2Z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-		</a>
-		<!-- video -->
-		<a href="https://www.youtube.com/watch?v=ECR4oAwocjs" target="_blank" data-click="ytb-btn">
-			<svg
-				class="h-6 w-6 text-gray-800 dark:text-white"
-				aria-hidden="true"
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				fill="currentColor"
-				viewBox="0 0 24 24"
-			>
-				<path
-					fill-rule="evenodd"
-					d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
-					clip-rule="evenodd"
-				/>
-			</svg>
+		<!-- website -->
+		<a
+			href="https://www.ahead-huzaifah.com/"
+			target="_blank"
+			data-click="website-btn"
+			class="text-sm font-medium text-gray-600 hover:text-purple-600 hover:underline"
+		>
+			Abu Huzaifah
 		</a>
 		<!-- repo -->
-		<a
-			href="https://github.com/poloclub/transformer-explainer"
-			target="_blank"
-			data-click="github_btn"
-		>
+		<a href="https://github.com/maercaestro" target="_blank" data-click="github_btn">
 			<svg
-				class="h-6 w-6 text-gray-800 dark:text-white"
+				class="h-6 w-6 text-gray-800 transition-colors hover:text-purple-600 dark:text-white"
 				aria-hidden="true"
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -104,8 +73,8 @@
 
 			background: linear-gradient(
 				to right,
-				theme('colors.blue.500') 0%,
-				theme('colors.purple.500') 60%
+				theme('colors.purple.600') 0%,
+				theme('colors.blue.500') 60%
 			);
 			background-clip: text;
 			-webkit-background-clip: text;

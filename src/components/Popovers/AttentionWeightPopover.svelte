@@ -14,11 +14,13 @@
 	const tokenGap = 6;
 
 	// placeholder data
-	const placeHolderData = Array(8).fill(0).map(() => Array(8).fill(0));
+	const placeHolderData = Array(8)
+		.fill(0)
+		.map(() => Array(8).fill(0));
 
 	// generate data
 	$: rawSoftmaxed = $modelData?.outputs?.block_0_attn_head_0_attn_dropout?.data || placeHolderData;
-	$: softmaxed = rawSoftmaxed.map(row => row.map(cell => cell ?? 0)) as number[][];
+	$: softmaxed = rawSoftmaxed.map((row) => row.map((cell) => cell ?? 0)) as number[][];
 	$: maskedSoftmaxed = maskArray(softmaxed);
 
 	const visibleDimension = 8;
@@ -81,7 +83,7 @@
 
 	const draw = () => {
 		if (!timeline) return;
-		
+
 		const attentionRows = d3
 			.selectAll('.attention-weight-popover .attention-matrix g.g-row')
 			.nodes();
@@ -102,14 +104,14 @@
 
 		firstOutputRowRects.forEach((outputRect, outCellIdx) => {
 			if (!timeline) return;
-			
+
 			const isFirstOutCell = outCellIdx === 0;
 			const firstValColRects = d3.select(valueCols[outCellIdx]).selectAll('rect').nodes();
 			timeline.set(firstAttentionRowCircles, { opacity: 0.1 });
 
 			firstAttentionRowCircles.forEach((attentionRect, i) => {
 				if (!timeline) return;
-				
+
 				//attention
 				timeline
 					.fromTo(
@@ -229,7 +231,7 @@
 
 			outputCells.forEach((d, colIdx) => {
 				if (!timeline) return;
-				
+
 				const valueColRects = d3.select(valueCols[colIdx]).selectAll('rect').nodes();
 
 				timeline.fromTo(
@@ -264,11 +266,11 @@
 		highlightRow = d.rowIndex;
 		highlightCol = d.colIndex;
 	};
-	
+
 	const onMouseOutCell = (e: Event, d: any, el: any) => {
 		// Handle mouse out for individual cells
 	};
-	
+
 	const onMouseOutSvg = () => {
 		highlightCol = undefined;
 		highlightRow = undefined;
@@ -282,7 +284,7 @@
 
 <WeightPopoverCard
 	id="attention"
-	title={`Attention Head ${$attentionHeadIdx + 1} Out`}
+	title={`Output Kepala Perhatian ${$attentionHeadIdx + 1}`}
 	bind:isAnimationActive
 	{timeline}
 >
@@ -350,7 +352,7 @@
 			</div>
 		</div>
 		<div class="matrix flex flex-col items-center">
-			<div class="title">Keluar</div>
+			<div class="title">Output</div>
 			<div class="flex">
 				<Matrix
 					className="head-out-matrix"

@@ -53,9 +53,10 @@
 	};
 
 	const qkvColorScale = (t: number, i?: number): string => {
-		const color = (i ?? 0) < visibleDimension ? 'blue' : (i ?? 0) < visibleDimension * 2 ? 'red' : 'green';
+		const color =
+			(i ?? 0) < visibleDimension ? 'blue' : (i ?? 0) < visibleDimension * 2 ? 'red' : 'green';
 		return d3.interpolate(
-			theme.colors[color as keyof typeof theme.colors][100], 
+			theme.colors[color as keyof typeof theme.colors][100],
 			theme.colors[color as keyof typeof theme.colors][400]
 		)(t);
 	};
@@ -326,8 +327,8 @@
 		</div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1 self-end">
-				Embeddings<HelpPopover id="qkv-emgeddings" placement="top"
-					>{`Embeddings originate from tokens \nbut evolve through blocks, becoming \nabstract representations.`}</HelpPopover
+				Pembenaman<HelpPopover id="qkv-emgeddings" placement="top"
+					>{`Pembenaman berasal daripada token \ntetapi berkembang melalui blok, menjadi \nperwakilan abstrak.`}</HelpPopover
 				>
 			</div>
 			<!-- (tokenLen, 768) -->
@@ -351,8 +352,8 @@
 		<div class="operator"><div class="symbol mul">&times;</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Q·K·V Weights<HelpPopover id="qkv-weights" placement="top"
-					>{`Transforms embedding vectors into Query, Key, and Value vectors. \nParameters tha learned in training, fixed in prediction.`}</HelpPopover
+				Berat Q·K·V<HelpPopover id="qkv-weights" placement="top"
+					>{`Menukar vektor pembenaman kepada vektor Query, Key, dan Value. \nParameter yang dipelajari dalam latihan, tetap dalam ramalan.`}</HelpPopover
 				>
 			</div>
 			<div class="flex gap-0">
@@ -379,8 +380,8 @@
 		<div class="operator"><div class="symbol plus">+</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Q·K·V Bias<HelpPopover id="qkv-bias" placement="top"
-					>{`Offsets added after transformation. \nParameters that learned in training, fixed in prediction.`}</HelpPopover
+				Bias Q·K·V<HelpPopover id="qkv-bias" placement="top"
+					>{`Ofset yang ditambah selepas transformasi. \nParameter yang dipelajari dalam latihan, tetap dalam ramalan.`}</HelpPopover
 				>
 			</div>
 			<Matrix

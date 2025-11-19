@@ -292,7 +292,7 @@
 	const noOpTooltipHandler = () => undefined;
 </script>
 
-<WeightPopoverCard id="mlp-down" title={'MLP Compression'} bind:isAnimationActive {timeline}>
+<WeightPopoverCard id="mlp-down" title={'Pemampatan PMP'} bind:isAnimationActive {timeline}>
 	<div class="mlp-weight-popover weight-popover-content flex items-center justify-start">
 		<div class="matrix flex flex-col items-center">
 			<div class="tokens" style={`gap:${tokenGap}px`}>
@@ -303,8 +303,8 @@
 		</div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Expanded Embeddings <HelpPopover id="mlp-down-emgeddings" placement="top"
-					>{`Expanded latent vectors through MLP expansion layer.`}</HelpPopover
+				Pembenaman Diperluas <HelpPopover id="mlp-down-emgeddings" placement="top"
+					>{`Vektor tersembunyi yang diperluas melalui lapisan pengembangan PMP.`}</HelpPopover
 				>
 			</div>
 			<div class="flex">
@@ -332,8 +332,8 @@
 		</div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Compression Weights <HelpPopover id="mlp-down-weights" placement="top"
-					>{`Projects expanded latent vectors back to original space. \nParameters that learned in training, fixed in prediction.`}</HelpPopover
+				Berat Pemampatan <HelpPopover id="mlp-down-weights" placement="top"
+					>{`Mengunjurkan vektor tersembunyi yang diperluas kembali ke ruang asal. \nParameter yang dipelajari dalam latihan, tetap dalam ramalan.`}</HelpPopover
 				>
 			</div>
 			<div class="flex gap-0">
@@ -360,8 +360,8 @@
 		<div class="operator"><div class="symbol plus px-3">+</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Compression Bias <HelpPopover id="mlp-down-bias" placement="top"
-					>{`Offsets added after compression. \nParameters that learned in training, fixed in prediction.`}</HelpPopover
+				Bias Pemampatan <HelpPopover id="mlp-down-bias" placement="top"
+					>{`Ofset yang ditambahkan selepas pemampatan. \nParameter yang dipelajari dalam latihan, tetap dalam ramalan.`}</HelpPopover
 				>
 			</div>
 			<Matrix
@@ -386,7 +386,7 @@
 			<div class="symbol equal px-4">=</div>
 		</div>
 		<div class="matrix flex flex-col items-center">
-			<div class="title">Compressed <br />Embeddings</div>
+			<div class="title">Pembenaman <br />Termampat</div>
 			<div class="flex">
 				<Matrix
 					className="mlp-down-out"

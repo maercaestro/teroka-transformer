@@ -50,9 +50,9 @@
 		role="group"
 		data-click="attention-step-title"
 	>
-		<button 
+		<button
 			type="button"
-			class="w-max bg-transparent border-none cursor-help text-left p-0 m-0 font-inherit"
+			class="font-inherit m-0 w-max cursor-help border-none bg-transparent p-0 text-left"
 			on:click={(e) => onClickReadMore(e, 'self-attention')}
 			on:keydown={(e) => {
 				if (e.key === 'Enter' || e.key === ' ') {
@@ -138,7 +138,7 @@
 									<div class={`vector x1-12 ${outputVectorColor}`}></div>
 								</div>
 								<Tooltip placement="right" class="popover"
-									>Output Attention, Kepala 1, vektor({$modelMeta.dimension /
+									>Output Perhatian, Kepala 1, vektor({$modelMeta.dimension /
 										$modelMeta.attention_head_num})</Tooltip
 								>
 							{/each}

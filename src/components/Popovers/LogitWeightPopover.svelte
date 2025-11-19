@@ -316,9 +316,9 @@
 	<div class="weight-popover-content flex items-center justify-start">
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				<span>Output<br />Embedding</span>
+				<span>Output<br />Pembenaman</span>
 				<HelpPopover id="hidden-states" placement="top"
-					>{`After passing through all blocks, \nthe final token's embedding vector \ncontains all the contextual information \nfrom the preceding tokens.`}</HelpPopover
+					>{`Selepas melalui semua blok, \nvektor pembenaman token terakhir \nmengandungi semua maklumat kontekstual \ndari token sebelumnya.`}</HelpPopover
 				>
 			</div>
 			<Matrix
@@ -341,9 +341,9 @@
 		<div class="operator"><div class="symbol mul pl-3">&times;</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Output Projection Weights
+				Berat Projeksi Output
 				<HelpPopover id="lm-head-weights" placement="top"
-					>{`Transforms the final embedding into a vocabulary distribution.\nParameters tha learned in training, fixed in prediction.`}</HelpPopover
+					>{`Menukar pembenaman akhir kepada taburan kosakata.\nParameter yang dipelajari dalam latihan, tetap dalam ramalan.`}</HelpPopover
 				>
 			</div>
 			<div class="flex gap-0">
@@ -370,8 +370,8 @@
 		<div class="operator"><div class="symbol plus">+</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Output Projection Bias<HelpPopover id="lm-head-bias" placement="top"
-					>{`Offsets added after the transformation.\nParameters tha learned in training, fixed in prediction.`}</HelpPopover
+				Bias Projeksi Output<HelpPopover id="lm-head-bias" placement="top"
+					>{`Ofset yang ditambahkan selepas transformasi.\nParameter yang dipelajari dalam latihan, tetap dalam ramalan.`}</HelpPopover
 				>
 			</div>
 			<Matrix
@@ -397,7 +397,7 @@
 			<div class="title flex items-center gap-1">
 				Logits
 				<HelpPopover id="logits" placement="top"
-					>{`Raw scores representing the model’s preference \nfor each vocabulary token before applying softmax.`}</HelpPopover
+					>{`Skor mentah yang mewakili keutamaan model \nuntuk setiap token kosakata sebelum menggunakan softmax.`}</HelpPopover
 				>
 			</div>
 			<div class="flex">

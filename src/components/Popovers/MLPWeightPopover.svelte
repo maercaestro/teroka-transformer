@@ -289,16 +289,16 @@
 		highlightCol = undefined;
 		highlightRow = undefined;
 	};
-	
+
 	const onMouseOutCell = () => {
 		highlightCol = undefined;
 		highlightRow = undefined;
 	};
-	
+
 	const showTooltip = () => undefined;
 </script>
 
-<WeightPopoverCard id="mlp-up" title={'MLP Expansion'} bind:isAnimationActive {timeline}>
+<WeightPopoverCard id="mlp-up" title={'Pengembangan PMP'} bind:isAnimationActive {timeline}>
 	<div class="mlp-weight-popover weight-popover-content flex items-center justify-start">
 		<div class="matrix flex flex-col items-center">
 			<div class="tokens" style={`gap:${tokenGap}px`}>
@@ -395,7 +395,7 @@
 			</div>
 		</div> -->
 		<div class="matrix flex flex-col items-center">
-			<div class="title">Pembenaman Diperluas <br />Embeddings</div>
+			<div class="title">Pembenaman Diperluas</div>
 			<div class="flex">
 				<Matrix
 					className="mlp-out"

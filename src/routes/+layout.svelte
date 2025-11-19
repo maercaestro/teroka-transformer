@@ -3,6 +3,7 @@
 	import '~/styles/global.scss';
 	import Topbar from '~/components/Topbar.svelte';
 	import { isLoaded, predictedColor, rootRem } from '~/store';
+	import SummarySlides from '~/components/SummarySlides.svelte';
 	import Article from '~/components/article/Article.svelte';
 	import { onMount } from 'svelte';
 	import { Spinner } from 'flowbite-svelte';
@@ -72,6 +73,7 @@
 		</main>
 	</div>
 	<div class="article h-auto w-full">
+		<SummarySlides />
 		<Article></Article>
 	</div>
 </div>

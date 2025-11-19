@@ -166,7 +166,7 @@
 			</div>
 			{#if isEmbeddingExpanded}
 				<Tooltip triggeredBy=".embedding .vector" placement="right" class="popover"
-					>vector({$modelMeta.dimension})</Tooltip
+					>vektor({$modelMeta.dimension})</Tooltip
 				>
 				<!-- token id and embedding -->
 				<div class="column token-embedding embedding-detail">
@@ -258,7 +258,7 @@
 					<div class={`vector ${embeddingVectorColor}`} class:last={index === $tokens.length - 1}>
 						<VectorCanvas active={$blockIdx === 0 && (isHovered || isEmbeddingExpanded)} />
 					</div>
-					<Tooltip placement="right" class="popover">vector({$modelMeta.dimension})</Tooltip>
+					<Tooltip placement="right" class="popover">vektor({$modelMeta.dimension})</Tooltip>
 				{/each}
 			</div>
 		</div>

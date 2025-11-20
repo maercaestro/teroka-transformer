@@ -60,9 +60,9 @@
 					onClickReadMore(e, 'self-attention');
 				}
 			}}
-			aria-label="Klik untuk maklumat lanjut tentang Multi-kepala Self Attention"
+			aria-label="Klik untuk maklumat lanjut tentang Multi-head Self Attention"
 		>
-			Multi-kepala Self Attention
+			Multi-head Self Attention
 		</button>
 	</div>
 	<div class="content relative">

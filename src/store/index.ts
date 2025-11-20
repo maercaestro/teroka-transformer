@@ -20,11 +20,11 @@ export const isFetchingModel = writable(true);
 export const isLoaded = writable(false);
 
 export const inputTextExample = [
-	'Visualisasi data membolehkan pengguna untuk',
-	'Kecerdasan buatan sedang mengubah cara kita',
-	'Pembelajaran mesin membolehkan komputer untuk',
-	'Model transformer seperti GPT menggunakan',
-	'Teknologi AI masa depan akan dapat'
+	'Data visualization helps users to',
+	'Artificial intelligence is transforming the way we',
+	'Machine learning enables computers to',
+	'Transformer models like GPT use',
+	'The future of AI technology will'
 ];
 
 const initialExIdx = 0;

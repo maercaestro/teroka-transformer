@@ -10,14 +10,14 @@
 
 <CommonPopover
 	className="activation-popover"
-	title="GELU Activation"
+	title="Pengaktifan GELU"
 	{offset}
 	{triggeredBy}
 	{trigger}
 	{placement}
 	goTo="article-activation"
 >
-		Applies non-linear transformation to linearly transformed output to learn complex patterns.
+		Mengaplikasikan transformasi bukan linear kepada output yang telah ditransformasikan secara linear untuk belajar corak kompleks.
 </CommonPopover>
 
 <style>

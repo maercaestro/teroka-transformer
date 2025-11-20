@@ -10,7 +10,7 @@
 
 <CommonPopover
 	className="ln-popover"
-	title="Layer Normalization"
+	title="Normalisasi Lapisan"
 	{offset}
 	{triggeredBy}
 	{trigger}
@@ -18,7 +18,7 @@
 	goTo="article-ln"
 >
 	<div class="ln-content">
-		Normalizes layer input to have a standard distribution for stability.
+		Menormalkan input lapisan supaya mempunyai taburan piawai untuk kestabilan.
 	</div></CommonPopover
 >
 

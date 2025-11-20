@@ -12,7 +12,7 @@
 
 <CommonPopover
 	className={className || "residual-popover"}
-	title="Residual Connection"
+	title="Sambungan Residual"
 	{offset}
 	{triggeredBy}
 	{trigger}
@@ -21,7 +21,7 @@
 	goTo="article-residual"
 >
 	<div class="residual-content">
-		Adds layer input to output to help preserve information.
+		Menambah input lapisan kepada output untuk membantu memelihara maklumat.
 	</div></CommonPopover
 >
 
